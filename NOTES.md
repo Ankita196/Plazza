@@ -39,9 +39,10 @@
 ---
 
 ## 3. What I Would Do Differently With More Time
-1. **Automated E2E Testing**: Add Detox or Maestro end-to-end flows testing user interaction through the blocked permission modal and settings deep link.
-2. **Offline Fuzzy Search**: Implement soundex or Levenshtein distance matching for pharmaceutical names (e.g., matching "Paracitamol" to "Paracetamol").
+1. **Design**: design implemetation can better .
+2. **Naviagtion and screens**:  add tabs naviagtion and screens
 3. **Animations**: Add animated layout transitions when items are added, removed, or when coupons are dynamically auto-removed using React Native Reanimated.
+
 
 ---
 
@@ -51,6 +52,7 @@
   - Designing a pluggable coupon rule interface that allows on-the-spot extension without modifying cart or bill code.
   - Setting up Jest unit tests to verify critical spec invariants (delivery fee threshold, ₹100 cap on `SAVE10`, auto-removal, and `maxQty`).
 * **What I Rejected / Rewrote**:
-  - Rejected any tight coupling between coupon validation and the UI components; moved all validation rules into dedicated, unit-testable pure services.
-  - Corrected Jest configuration to provide an in-memory storage mock rather than trying to load uncompiled ESM files during unit tests.
-  - Enforced strict TypeScript typing across all domain files without any stray `any` types.
+  -  global color palate and rewrote
+  -  rending between tabs 
+  -  UI changes
+  
