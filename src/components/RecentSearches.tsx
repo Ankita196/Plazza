@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { Colors } from '../theme';
 
 interface Props {
   searches: string[];
@@ -49,9 +50,9 @@ export const RecentSearches: React.FC<Props> = ({ searches, onSelect, onClear })
 const styles = StyleSheet.create({
   container: {
     paddingVertical: 10,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     borderBottomWidth: 1,
-    borderBottomColor: '#F1F5F9',
+    borderBottomColor: Colors.borderLight,
   },
   header: {
     flexDirection: 'row',
@@ -63,13 +64,13 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 11,
     fontWeight: '700',
-    color: '#64748B',
+    color: Colors.textSecondary,
     letterSpacing: 0.5,
   },
   clearText: {
     fontSize: 11,
-    color: '#0D9488',
-    fontWeight: '600',
+    color: Colors.primary,
+    fontWeight: '700',
   },
   scrollContent: {
     paddingHorizontal: 16,
@@ -78,12 +79,12 @@ const styles = StyleSheet.create({
   chip: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F1F5F9',
+    backgroundColor: Colors.surfaceSubtle,
     borderRadius: 20,
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderWidth: 1,
-    borderColor: '#E2E8F0',
+    borderColor: Colors.border,
     minHeight: 32,
   },
   clockIcon: {
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
   },
   chipText: {
     fontSize: 12,
-    color: '#334155',
+    color: Colors.textPrimary,
     fontWeight: '500',
   },
 });

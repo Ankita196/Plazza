@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { PermissionsState, PermissionStatus } from '../types';
+import { Colors } from '../theme';
 
 interface Props {
   permissions: PermissionsState;
@@ -11,13 +12,13 @@ interface Props {
 const getStatusColor = (status: PermissionStatus) => {
   switch (status) {
     case 'granted':
-      return '#059669'; // Green
+      return Colors.success;
     case 'blocked':
-      return '#DC2626'; // Red
+      return Colors.danger;
     case 'denied':
-      return '#D97706'; // Amber
+      return Colors.warning;
     default:
-      return '#6B7280'; // Gray
+      return Colors.textMuted;
   }
 };
 
@@ -79,11 +80,11 @@ export const PermissionDebugBanner: React.FC<Props> = ({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#1E293B',
+    backgroundColor: Colors.darkContainer,
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderBottomWidth: 1,
-    borderBottomColor: '#334155',
+    borderBottomColor: Colors.darkContainerBorder,
   },
   contentRow: {
     flexDirection: 'row',
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
   },
   title: {
-    color: '#94A3B8',
+    color: Colors.textMuted,
     fontSize: 10,
     fontWeight: '700',
     letterSpacing: 0.5,
@@ -124,13 +125,13 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   actionBtn: {
-    backgroundColor: '#3B82F6',
+    backgroundColor: Colors.info,
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 4,
   },
   actionBtnText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 11,
     fontWeight: '600',
   },

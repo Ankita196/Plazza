@@ -9,6 +9,7 @@ import { LocationHeader } from '../components/LocationHeader';
 import { SearchBar } from '../components/SearchBar';
 import { RecentSearches } from '../components/RecentSearches';
 import { MedicineSearchList } from '../components/MedicineSearchList';
+import { Colors } from '../theme';
 
 interface Props {
   onNavigateToCart: () => void;
@@ -123,14 +124,14 @@ export const HomeScreen: React.FC<Props> = ({ onNavigateToCart }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: Colors.background,
   },
   floatingCartBar: {
     position: 'absolute',
     bottom: 12,
     left: 16,
     right: 16,
-    backgroundColor: '#0F766E',
+    backgroundColor: Colors.primaryDark,
     borderRadius: 14,
     paddingHorizontal: 20,
     paddingVertical: 12,
@@ -144,23 +145,23 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
   },
   floatingCartItems: {
-    color: '#99F6E4',
+    color: Colors.primaryBorder,
     fontSize: 12,
     fontWeight: '600',
   },
   floatingCartTotal: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 18,
     fontWeight: '800',
   },
   viewCartBtn: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     paddingHorizontal: 16,
     paddingVertical: 8,
     borderRadius: 8,
   },
   viewCartText: {
-    color: '#0F766E',
+    color: Colors.primaryDark,
     fontSize: 14,
     fontWeight: '800',
   },

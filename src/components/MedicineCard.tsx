@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Medicine } from '../types';
+import { Colors } from '../theme';
 
 interface Props {
   medicine: Medicine;
@@ -100,13 +101,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     borderRadius: 14,
     padding: 16,
     marginHorizontal: 16,
     marginVertical: 6,
     borderWidth: 1,
-    borderColor: '#E2E8F0',
+    borderColor: Colors.border,
     elevation: 2,
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: 1 },
@@ -126,24 +127,24 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 16,
     fontWeight: '700',
-    color: '#0F172A',
+    color: Colors.textPrimary,
   },
   rxBadge: {
-    backgroundColor: '#FEE2E2',
-    borderColor: '#F87171',
+    backgroundColor: Colors.rxBg,
+    borderColor: Colors.rxBorder,
     borderWidth: 1,
     borderRadius: 4,
     paddingHorizontal: 6,
     paddingVertical: 1,
   },
   rxText: {
-    color: '#DC2626',
+    color: Colors.rxText,
     fontSize: 11,
     fontWeight: '800',
   },
   salt: {
     fontSize: 13,
-    color: '#64748B',
+    color: Colors.textSecondary,
     marginTop: 4,
   },
   metaRow: {
@@ -155,11 +156,11 @@ const styles = StyleSheet.create({
   price: {
     fontSize: 17,
     fontWeight: '800',
-    color: '#0F172A',
+    color: Colors.textPrimary,
   },
   maxQtyNote: {
     fontSize: 11,
-    color: '#94A3B8',
+    color: Colors.textMuted,
   },
   actionCol: {
     alignItems: 'center',
@@ -167,8 +168,8 @@ const styles = StyleSheet.create({
     minWidth: 90,
   },
   addButton: {
-    backgroundColor: '#ECFDF5',
-    borderColor: '#059669',
+    backgroundColor: Colors.secondaryLight,
+    borderColor: Colors.secondary,
     borderWidth: 1.5,
     borderRadius: 8,
     paddingHorizontal: 16,
@@ -179,7 +180,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   addButtonText: {
-    color: '#059669',
+    color: Colors.secondary,
     fontSize: 13,
     fontWeight: '800',
     letterSpacing: 0.5,
@@ -187,7 +188,7 @@ const styles = StyleSheet.create({
   stepperContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#059669',
+    backgroundColor: Colors.secondary,
     borderRadius: 8,
     overflow: 'hidden',
     height: 38,
@@ -199,10 +200,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   stepBtnDisabled: {
-    backgroundColor: '#6EE7B7',
+    backgroundColor: Colors.secondaryDisabled,
   },
   stepBtnText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 18,
     fontWeight: '700',
     lineHeight: 20,
@@ -217,13 +218,13 @@ const styles = StyleSheet.create({
     minWidth: 26,
   },
   qtyText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 14,
     fontWeight: '800',
   },
   maxReachedNotice: {
     fontSize: 10,
-    color: '#DC2626',
+    color: Colors.danger,
     fontWeight: '600',
     marginTop: 4,
   },

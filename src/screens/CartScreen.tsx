@@ -11,6 +11,7 @@ import { usePromotion } from '../context/PromotionContext';
 import { CartItemCard } from '../components/CartItemCard';
 import { CouponSection } from '../components/CouponSection';
 import { BillBreakdownView } from '../components/BillBreakdownView';
+import { Colors } from '../theme';
 
 interface Props {
   onNavigateToHome: () => void;
@@ -121,7 +122,7 @@ export const CartScreen: React.FC<Props> = ({ onNavigateToHome }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: Colors.background,
   },
   content: {
     paddingBottom: 40,
@@ -132,28 +133,28 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingVertical: 14,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     borderBottomWidth: 1,
-    borderBottomColor: '#E2E8F0',
+    borderBottomColor: Colors.border,
   },
   headerTitle: {
     fontSize: 18,
     fontWeight: '800',
-    color: '#0F172A',
+    color: Colors.textPrimary,
   },
   headerSubtitle: {
     fontSize: 12,
-    color: '#64748B',
+    color: Colors.textSecondary,
     marginTop: 2,
   },
   clearCartText: {
     fontSize: 13,
-    color: '#DC2626',
+    color: Colors.danger,
     fontWeight: '700',
   },
   rxNotice: {
     flexDirection: 'row',
-    backgroundColor: '#EFF6FF',
+    backgroundColor: Colors.infoLight,
     borderWidth: 1,
     borderColor: '#BFDBFE',
     marginHorizontal: 16,
@@ -176,7 +177,7 @@ const styles = StyleSheet.create({
   },
   rxNoticeDesc: {
     fontSize: 11,
-    color: '#3B82F6',
+    color: Colors.info,
     marginTop: 2,
   },
   itemsSection: {
@@ -184,7 +185,7 @@ const styles = StyleSheet.create({
   },
   emptyContainer: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: Colors.background,
     alignItems: 'center',
     justifyContent: 'center',
     padding: 32,
@@ -196,19 +197,19 @@ const styles = StyleSheet.create({
   emptyTitle: {
     fontSize: 20,
     fontWeight: '800',
-    color: '#0F172A',
+    color: Colors.textPrimary,
     marginBottom: 8,
   },
   emptySubtitle: {
     fontSize: 14,
-    color: '#64748B',
+    color: Colors.textSecondary,
     textAlign: 'center',
     lineHeight: 20,
     marginBottom: 24,
     maxWidth: 280,
   },
   exploreBtn: {
-    backgroundColor: '#0D9488',
+    backgroundColor: Colors.primary,
     paddingHorizontal: 24,
     paddingVertical: 12,
     borderRadius: 10,
@@ -216,7 +217,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   exploreBtnText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 15,
     fontWeight: '700',
   },

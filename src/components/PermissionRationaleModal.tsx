@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Modal, TouchableOpacity } from 'react-native';
 import { PermissionsState } from '../types';
+import { Colors } from '../theme';
 
 interface Props {
   visible: boolean;
@@ -140,25 +141,25 @@ const styles = StyleSheet.create({
   },
   bullet: {
     fontSize: 16,
-    color: '#0D9488',
+    color: Colors.primary,
     marginRight: 8,
     lineHeight: 20,
   },
   itemText: {
     flex: 1,
     fontSize: 13,
-    color: '#334155',
+    color: Colors.textSecondary,
     lineHeight: 18,
   },
   bold: {
     fontWeight: '700',
-    color: '#0F172A',
+    color: Colors.textPrimary,
   },
   buttonContainer: {
     gap: 10,
   },
   settingsButton: {
-    backgroundColor: '#0D9488',
+    backgroundColor: Colors.primary,
     paddingVertical: 12,
     borderRadius: 10,
     alignItems: 'center',
@@ -166,7 +167,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   settingsButtonText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 15,
     fontWeight: '700',
   },
@@ -177,7 +178,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   cancelButtonText: {
-    color: '#64748B',
+    color: Colors.textSecondary,
     fontSize: 14,
     fontWeight: '500',
   },

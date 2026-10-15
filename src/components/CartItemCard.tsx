@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { CartItem } from '../types';
+import { Colors } from '../theme';
 
 interface Props {
   item: CartItem;
@@ -99,13 +100,13 @@ export const CartItemCard: React.FC<Props> = ({
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     borderRadius: 14,
     padding: 16,
     marginHorizontal: 16,
     marginVertical: 6,
     borderWidth: 1,
-    borderColor: '#E2E8F0',
+    borderColor: Colors.border,
     elevation: 2,
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: 1 },
@@ -129,29 +130,29 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 16,
     fontWeight: '700',
-    color: '#0F172A',
+    color: Colors.textPrimary,
   },
   rxBadge: {
-    backgroundColor: '#FEE2E2',
-    borderColor: '#F87171',
+    backgroundColor: Colors.rxBg,
+    borderColor: Colors.rxBorder,
     borderWidth: 1,
     borderRadius: 4,
     paddingHorizontal: 6,
     paddingVertical: 1,
   },
   rxText: {
-    color: '#DC2626',
+    color: Colors.rxText,
     fontSize: 10,
     fontWeight: '800',
   },
   salt: {
     fontSize: 12,
-    color: '#64748B',
+    color: Colors.textSecondary,
     marginTop: 2,
   },
   unitPrice: {
     fontSize: 13,
-    color: '#0D9488',
+    color: Colors.primary,
     fontWeight: '600',
     marginTop: 4,
   },
@@ -168,12 +169,12 @@ const styles = StyleSheet.create({
     marginTop: 14,
     paddingTop: 12,
     borderTopWidth: 1,
-    borderTopColor: '#F1F5F9',
+    borderTopColor: Colors.borderLight,
   },
   stepper: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#059669',
+    backgroundColor: Colors.secondary,
     borderRadius: 8,
     overflow: 'hidden',
     height: 36,
@@ -185,10 +186,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   stepBtnDisabled: {
-    backgroundColor: '#6EE7B7',
+    backgroundColor: Colors.secondaryDisabled,
   },
   stepBtnText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 18,
     fontWeight: '700',
     lineHeight: 20,
@@ -203,7 +204,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   qtyText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 14,
     fontWeight: '800',
   },
@@ -212,23 +213,23 @@ const styles = StyleSheet.create({
   },
   subtotalLabel: {
     fontSize: 11,
-    color: '#94A3B8',
+    color: Colors.textMuted,
   },
   subtotalValue: {
     fontSize: 17,
     fontWeight: '800',
-    color: '#0F172A',
+    color: Colors.textPrimary,
   },
   maxQtyNotice: {
     marginTop: 8,
-    backgroundColor: '#FEF2F2',
+    backgroundColor: Colors.dangerLight,
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 6,
   },
   maxQtyText: {
     fontSize: 11,
-    color: '#B91C1C',
+    color: Colors.danger,
     fontWeight: '500',
   },
 });

@@ -7,6 +7,7 @@ import {
   StyleSheet,
   ActivityIndicator,
 } from 'react-native';
+import { Colors } from '../theme';
 
 interface Props {
   value: string;
@@ -35,7 +36,7 @@ export const SearchBar: React.FC<Props> = ({
           onChangeText={onChangeText}
           onSubmitEditing={onSubmit}
           placeholder={placeholder}
-          placeholderTextColor="#94A3B8"
+          placeholderTextColor={Colors.textMuted}
           returnKeyType="search"
           autoCapitalize="none"
           autoCorrect={false}
@@ -43,7 +44,7 @@ export const SearchBar: React.FC<Props> = ({
           accessibilityLabel="Search medicines by name or salt"
         />
         {isLoading && (
-          <ActivityIndicator size="small" color="#0D9488" style={styles.iconRight} />
+          <ActivityIndicator size="small" color={Colors.primary} style={styles.iconRight} />
         )}
         {!isLoading && value.length > 0 && (
           <TouchableOpacity
@@ -65,17 +66,17 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 16,
     paddingVertical: 10,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     borderBottomWidth: 1,
-    borderBottomColor: '#F1F5F9',
+    borderBottomColor: Colors.borderLight,
   },
   inputWrapper: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F8FAFC',
+    backgroundColor: Colors.surfaceSubtle,
     borderRadius: 12,
     borderWidth: 1.5,
-    borderColor: '#E2E8F0',
+    borderColor: Colors.border,
     paddingHorizontal: 12,
     height: 48,
   },
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     fontSize: 14,
-    color: '#0F172A',
+    color: Colors.textPrimary,
     paddingVertical: 0,
   },
   iconRight: {
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
   },
   clearText: {
     fontSize: 14,
-    color: '#94A3B8',
+    color: Colors.textMuted,
     fontWeight: '700',
   },
 });

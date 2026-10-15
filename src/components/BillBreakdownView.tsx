@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { BillBreakdown } from '../types';
 import { FREE_DELIVERY_THRESHOLD } from '../services/billCalculator';
+import { Colors } from '../theme';
 
 interface Props {
   bill: BillBreakdown;
@@ -127,14 +128,14 @@ const styles = StyleSheet.create({
   },
   boldGreen: {
     fontWeight: '800',
-    color: '#059669',
+    color: Colors.success,
   },
   card: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     borderRadius: 14,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#E2E8F0',
+    borderColor: Colors.border,
     elevation: 2,
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: 1 },
@@ -149,12 +150,12 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 14,
-    color: '#475569',
+    color: Colors.textSecondary,
   },
   value: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#0F172A',
+    color: Colors.textPrimary,
   },
   discountLabelRow: {
     flexDirection: 'row',
@@ -163,11 +164,11 @@ const styles = StyleSheet.create({
   },
   discountLabel: {
     fontSize: 14,
-    color: '#059669',
+    color: Colors.success,
     fontWeight: '600',
   },
   couponTag: {
-    backgroundColor: '#DCFCE7',
+    backgroundColor: Colors.successLight,
     paddingHorizontal: 6,
     paddingVertical: 1,
     borderRadius: 4,
@@ -180,7 +181,7 @@ const styles = StyleSheet.create({
   discountValue: {
     fontSize: 14,
     fontWeight: '700',
-    color: '#059669',
+    color: Colors.success,
   },
   freeDeliveryBadge: {
     flexDirection: 'row',
@@ -189,17 +190,17 @@ const styles = StyleSheet.create({
   },
   strikethroughFee: {
     fontSize: 12,
-    color: '#94A3B8',
+    color: Colors.textMuted,
     textDecorationLine: 'line-through',
   },
   freeText: {
     fontSize: 13,
     fontWeight: '800',
-    color: '#059669',
+    color: Colors.success,
   },
   divider: {
     height: 1,
-    backgroundColor: '#E2E8F0',
+    backgroundColor: Colors.border,
     marginVertical: 12,
   },
   grandTotalRow: {
@@ -210,20 +211,20 @@ const styles = StyleSheet.create({
   grandTotalLabel: {
     fontSize: 16,
     fontWeight: '800',
-    color: '#0F172A',
+    color: Colors.textPrimary,
   },
   taxInclusiveNote: {
     fontSize: 11,
-    color: '#94A3B8',
+    color: Colors.textMuted,
     marginTop: 2,
   },
   grandTotalValue: {
     fontSize: 20,
     fontWeight: '800',
-    color: '#0D9488',
+    color: Colors.primary,
   },
   placeOrderBtn: {
-    backgroundColor: '#0D9488',
+    backgroundColor: Colors.primary,
     marginTop: 16,
     paddingVertical: 14,
     borderRadius: 12,
@@ -231,18 +232,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     minHeight: 50,
     elevation: 3,
-    shadowColor: '#0D9488',
+    shadowColor: Colors.primary,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.25,
     shadowRadius: 8,
   },
   placeOrderBtnDisabled: {
-    backgroundColor: '#94A3B8',
+    backgroundColor: Colors.textMuted,
     shadowOpacity: 0,
     elevation: 0,
   },
   placeOrderBtnText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 16,
     fontWeight: '800',
     letterSpacing: 0.5,

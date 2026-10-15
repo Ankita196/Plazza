@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
 import { Medicine } from '../types';
 import { MedicineCard } from './MedicineCard';
+import { Colors } from '../theme';
 
 interface Props {
   query: string;
@@ -94,17 +95,17 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 16,
     fontWeight: '800',
-    color: '#0F172A',
+    color: Colors.textPrimary,
   },
   sectionSubtitle: {
     fontSize: 12,
-    color: '#64748B',
+    color: Colors.textSecondary,
     marginTop: 2,
   },
   resultsCount: {
     fontSize: 13,
     fontWeight: '600',
-    color: '#0F766E',
+    color: Colors.primaryDark,
   },
   centerState: {
     flex: 1,
@@ -120,21 +121,21 @@ const styles = StyleSheet.create({
   stateTitle: {
     fontSize: 18,
     fontWeight: '700',
-    color: '#0F172A',
+    color: Colors.textPrimary,
     marginBottom: 8,
     textAlign: 'center',
   },
   stateDesc: {
     fontSize: 14,
-    color: '#64748B',
+    color: Colors.textSecondary,
     textAlign: 'center',
     lineHeight: 20,
     marginBottom: 12,
   },
   tipText: {
     fontSize: 12,
-    color: '#0D9488',
-    backgroundColor: '#CCFBF1',
+    color: Colors.primary,
+    backgroundColor: Colors.primaryLight,
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 8,

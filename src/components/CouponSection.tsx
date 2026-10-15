@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { CouponRule } from '../types';
 import { CouponRegistry } from '../services/couponRules';
+import { Colors } from '../theme';
 
 interface Props {
   appliedCouponCode: string | null;
@@ -140,7 +141,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 12,
     fontWeight: '800',
-    color: '#64748B',
+    color: Colors.textSecondary,
     letterSpacing: 0.5,
     marginBottom: 8,
   },
@@ -153,17 +154,17 @@ const styles = StyleSheet.create({
   input: {
     flex: 1,
     height: 44,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     borderWidth: 1.5,
-    borderColor: '#E2E8F0',
+    borderColor: Colors.border,
     borderRadius: 10,
     paddingHorizontal: 12,
     fontSize: 13,
-    color: '#0F172A',
+    color: Colors.textPrimary,
     fontWeight: '600',
   },
   applyBtn: {
-    backgroundColor: '#0D9488',
+    backgroundColor: Colors.primary,
     height: 44,
     paddingHorizontal: 16,
     borderRadius: 10,
@@ -171,10 +172,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   applyBtnDisabled: {
-    backgroundColor: '#94A3B8',
+    backgroundColor: Colors.textMuted,
   },
   applyBtnText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontWeight: '700',
     fontSize: 13,
   },
@@ -185,20 +186,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     borderWidth: 1,
-    borderColor: '#E2E8F0',
+    borderColor: Colors.border,
     borderRadius: 12,
     padding: 12,
   },
   couponCardApplied: {
-    borderColor: '#059669',
+    borderColor: Colors.success,
     backgroundColor: '#F0FDF4',
     borderWidth: 1.5,
   },
   couponCardIneligible: {
-    backgroundColor: '#F8FAFC',
-    borderColor: '#E2E8F0',
+    backgroundColor: Colors.background,
+    borderColor: Colors.border,
   },
   couponLeft: {
     flex: 1,
@@ -211,20 +212,20 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   codeBadge: {
-    backgroundColor: '#E0F2FE',
+    backgroundColor: Colors.offerBg,
     borderWidth: 1,
-    borderColor: '#38BDF8',
+    borderColor: Colors.offerBorder,
     borderStyle: 'dashed',
     borderRadius: 6,
     paddingHorizontal: 8,
     paddingVertical: 2,
   },
   codeBadgeApplied: {
-    backgroundColor: '#DCFCE7',
+    backgroundColor: Colors.successLight,
     borderColor: '#22C55E',
   },
   codeText: {
-    color: '#0369A1',
+    color: Colors.offerText,
     fontWeight: '800',
     fontSize: 12,
     letterSpacing: 0.5,
@@ -240,16 +241,16 @@ const styles = StyleSheet.create({
   couponTitle: {
     fontSize: 14,
     fontWeight: '700',
-    color: '#0F172A',
+    color: Colors.textPrimary,
   },
   couponDesc: {
     fontSize: 11,
-    color: '#64748B',
+    color: Colors.textSecondary,
     marginTop: 2,
   },
   ineligibleReason: {
     fontSize: 11,
-    color: '#DC2626',
+    color: Colors.danger,
     marginTop: 4,
     fontWeight: '500',
   },
@@ -259,7 +260,7 @@ const styles = StyleSheet.create({
   },
   selectBtn: {
     borderWidth: 1.5,
-    borderColor: '#0D9488',
+    borderColor: Colors.primary,
     borderRadius: 8,
     paddingHorizontal: 14,
     paddingVertical: 6,
@@ -270,16 +271,16 @@ const styles = StyleSheet.create({
     borderColor: '#CBD5E1',
   },
   selectBtnText: {
-    color: '#0D9488',
+    color: Colors.primary,
     fontWeight: '800',
     fontSize: 12,
   },
   selectBtnTextDisabled: {
-    color: '#94A3B8',
+    color: Colors.textMuted,
   },
   removeBtn: {
     borderWidth: 1.5,
-    borderColor: '#DC2626',
+    borderColor: Colors.danger,
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 6,
@@ -287,7 +288,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   removeBtnText: {
-    color: '#DC2626',
+    color: Colors.danger,
     fontWeight: '800',
     fontSize: 12,
   },

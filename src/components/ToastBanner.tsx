@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Animated } from 'react-native';
 import { ToastMessage } from '../types';
+import { Colors } from '../theme';
 
 interface Props {
   toast: ToastMessage | null;
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
   card: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#1E293B',
+    backgroundColor: Colors.darkContainer,
     borderRadius: 12,
     padding: 14,
     shadowColor: '#000000',
@@ -69,15 +70,15 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 8,
     borderWidth: 1,
-    borderColor: '#334155',
+    borderColor: Colors.darkContainerBorder,
   },
   warningCard: {
-    backgroundColor: '#7F1D1D', // Dark Red/Burgundy for warnings
-    borderColor: '#DC2626',
+    backgroundColor: '#7F1D1D',
+    borderColor: Colors.danger,
   },
   successCard: {
-    backgroundColor: '#064E3B', // Dark Emerald for success
-    borderColor: '#059669',
+    backgroundColor: '#064E3B',
+    borderColor: Colors.success,
   },
   icon: {
     fontSize: 20,
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontWeight: '800',
     fontSize: 13,
     marginBottom: 2,
@@ -98,7 +99,7 @@ const styles = StyleSheet.create({
     lineHeight: 16,
   },
   closeIcon: {
-    color: '#94A3B8',
+    color: Colors.textMuted,
     fontSize: 14,
     paddingLeft: 8,
     fontWeight: '700',

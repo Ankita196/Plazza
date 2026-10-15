@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { LocationCoordinates } from '../types';
+import { Colors } from '../theme';
 
 interface Props {
   coordinates: LocationCoordinates | null;
@@ -42,13 +43,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 16,
     paddingVertical: 12,
-    backgroundColor: '#0F766E', // Plazza medical teal
+    backgroundColor: Colors.primaryDark,
   },
   badge: {
     width: 36,
     height: 36,
     borderRadius: 18,
-    backgroundColor: '#115E59',
+    backgroundColor: 'rgba(0, 0, 0, 0.15)',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 10,
@@ -61,14 +62,14 @@ const styles = StyleSheet.create({
   },
   label: {
     fontSize: 11,
-    color: '#99F6E4',
+    color: Colors.primaryBorder,
     fontWeight: '600',
     textTransform: 'uppercase',
     letterSpacing: 0.5,
   },
   locationText: {
     fontSize: 14,
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontWeight: '700',
     marginTop: 2,
   },

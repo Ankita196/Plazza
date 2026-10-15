@@ -13,6 +13,7 @@ import { PromotionProvider, usePromotion } from './src/context/PromotionContext'
 import { HomeScreen } from './src/screens/HomeScreen';
 import { CartScreen } from './src/screens/CartScreen';
 import { ToastBanner } from './src/components/ToastBanner';
+import { Colors } from './src/theme';
 
 type TabType = 'home' | 'cart';
 
@@ -93,18 +94,18 @@ function App() {
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    backgroundColor: '#0F766E', // Matches top header branding
+    backgroundColor: Colors.primaryDark,
   },
   contentArea: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: Colors.background,
   },
   tabBar: {
     flexDirection: 'row',
     height: 56,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: Colors.surface,
     borderTopWidth: 1,
-    borderTopColor: '#E2E8F0',
+    borderTopColor: Colors.border,
     elevation: 8,
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: -2 },
@@ -119,7 +120,7 @@ const styles = StyleSheet.create({
   },
   tabButtonActive: {
     borderTopWidth: 2,
-    borderTopColor: '#0D9488',
+    borderTopColor: Colors.primary,
   },
   cartIconWrapper: {
     position: 'relative',
@@ -130,18 +131,18 @@ const styles = StyleSheet.create({
   tabText: {
     fontSize: 11,
     fontWeight: '600',
-    color: '#64748B',
+    color: Colors.textSecondary,
     marginTop: 2,
   },
   tabTextActive: {
-    color: '#0D9488',
+    color: Colors.primary,
     fontWeight: '800',
   },
   badge: {
     position: 'absolute',
     top: -4,
     right: -10,
-    backgroundColor: '#DC2626',
+    backgroundColor: Colors.danger,
     borderRadius: 9,
     minWidth: 18,
     height: 18,
@@ -150,7 +151,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
   },
   badgeText: {
-    color: '#FFFFFF',
+    color: Colors.textInverse,
     fontSize: 10,
     fontWeight: '800',
   },
