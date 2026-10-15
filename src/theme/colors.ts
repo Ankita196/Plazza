@@ -1,22 +1,25 @@
 /**
  * Plazza Design System - Centralized Color Palette
- * Modify colors here to change the entire app theme in one place.
+ * Extracted directly from the official Plazza application design:
+ * - Deep Burgundy / Wine header: #830026
+ * - Vibrant Magenta / Pink actions & ADD buttons: #E60067
+ * - Soft Cyan offer tags: #0284C7 & #E0F2FE
  */
 
 export const Colors = {
-  // Brand Colors
-  primary: '#0D9488',          // Plazza Medical Teal
-  primaryDark: '#0F766E',      // Dark Teal for headers & active containers
-  primaryLight: '#CCFBF1',     // Very light teal for chips & highlights
-  primaryBorder: '#99F6E4',
+  // Brand Header & Accents (Plazza Deep Burgundy)
+  primary: '#830026',          // Deep Burgundy / Maroon header and brand identity
+  primaryDark: '#67001E',      // Darker Burgundy for status bar & contrast
+  primaryLight: '#FDF2F8',     // Soft rose tint
+  primaryBorder: '#FBCFE8',    // Subtle rose border
 
-  // Secondary & Accents
-  secondary: '#059669',        // Emerald green for actions & cart buttons
-  secondaryLight: '#ECFDF5',   // Light green button background
-  secondaryDisabled: '#6EE7B7',
+  // Secondary & Action Accents (Plazza Vibrant Magenta / Hot Pink)
+  secondary: '#E60067',        // Vibrant Pink for ADD button, Active Tab, & CTA
+  secondaryLight: '#FDF2F8',   // Light pink button background
+  secondaryDisabled: '#F472B6',// Muted pink when limit reached
 
   // Surfaces & Backgrounds
-  background: '#F8FAFC',       // Clean slate app background
+  background: '#F8FAFC',       // Clean light app background
   surface: '#FFFFFF',          // Card & modal background
   surfaceSubtle: '#F1F5F9',    // Input & chip background
 
@@ -45,10 +48,10 @@ export const Colors = {
   rxBg: '#FEE2E2',
   rxBorder: '#F87171',
 
-  // Promotional & Offers
-  offerText: '#0369A1',
+  // Promotional & Offers ("Best offer applied" in screenshot)
+  offerText: '#0284C7',
   offerBg: '#E0F2FE',
-  offerBorder: '#38BDF8',
+  offerBorder: '#BAE6FD',
 
   // Debug & Dark Container
   darkContainer: '#1E293B',
