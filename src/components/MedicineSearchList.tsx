@@ -85,7 +85,7 @@ export const MedicineSearchList: React.FC<Props> = ({
 
 const styles = StyleSheet.create({
   listContent: {
-    paddingBottom: 40,
+    paddingBottom: 100,
     paddingTop: 8,
   },
   headerInfo: {
