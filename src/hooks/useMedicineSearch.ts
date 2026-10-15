@@ -1,7 +1,9 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Medicine } from '../types';
-import { CATALOG } from '../data/catalog';
+import rawCatalog from '../data/catalog.json';
 import { StorageService } from '../services/storageService';
+
+const CATALOG: Medicine[] = rawCatalog as Medicine[];
 
 export function useMedicineSearch() {
   const [query, setQuery] = useState('');
