@@ -28,13 +28,14 @@ function MainApp() {
       {/* Global Toast Banner for Coupon Auto-removal & Alerts */}
       <ToastBanner toast={toast} onDismiss={dismissToast} />
 
-      {/* Main Tab View */}
+      {/* Main Tab View - Keep screens mounted to preserve state and avoid screen refresh */}
       <View style={styles.contentArea}>
-        {activeTab === 'home' ? (
+        <View style={[styles.tabContent, { display: activeTab === 'home' ? 'flex' : 'none' }]}>
           <HomeScreen onNavigateToCart={() => setActiveTab('cart')} />
-        ) : (
+        </View>
+        <View style={[styles.tabContent, { display: activeTab === 'cart' ? 'flex' : 'none' }]}>
           <CartScreen onNavigateToHome={() => setActiveTab('home')} />
-        )}
+        </View>
       </View>
 
       {/* Bottom Navigation Bar */}
@@ -99,6 +100,9 @@ const styles = StyleSheet.create({
   contentArea: {
     flex: 1,
     backgroundColor: Colors.background,
+  },
+  tabContent: {
+    flex: 1,
   },
   tabBar: {
     flexDirection: 'row',
