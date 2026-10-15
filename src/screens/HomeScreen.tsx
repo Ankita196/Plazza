@@ -45,7 +45,7 @@ export const HomeScreen: React.FC<Props> = ({ onNavigateToCart }) => {
     decrement,
   } = useCart();
 
-  const displayedMedicines = query.trim().length > 0 ? searchResults : allMedicines;
+  const displayedMedicines = (query.trim().length > 0 ? searchResults : allMedicines) || [];
 
   return (
     <View style={styles.container}>

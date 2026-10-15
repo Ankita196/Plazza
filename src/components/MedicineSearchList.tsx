@@ -14,14 +14,16 @@ interface Props {
 }
 
 export const MedicineSearchList: React.FC<Props> = ({
-  query,
-  items,
-  cartQuantities,
-  isLoading,
+  query = '',
+  items = [],
+  cartQuantities = {},
+  isLoading = false,
   onAddToCart,
   onIncrement,
   onDecrement,
 }) => {
+  const safeItems = items || [];
+
   if (isLoading) {
     return (
       <View style={styles.centerState} accessibilityRole="progressbar">
@@ -32,7 +34,7 @@ export const MedicineSearchList: React.FC<Props> = ({
   }
 
   // No results state
-  if (query.trim().length > 0 && items.length === 0) {
+  if (query.trim().length > 0 && safeItems.length === 0) {
     return (
       <View style={styles.centerState} accessibilityRole="text">
         <Text style={styles.stateIcon}>🔍</Text>
@@ -49,7 +51,7 @@ export const MedicineSearchList: React.FC<Props> = ({
 
   return (
     <FlatList
-      data={items}
+      data={safeItems}
       keyExtractor={item => item.id}
       contentContainerStyle={styles.listContent}
       keyboardShouldPersistTaps="handled"
@@ -66,12 +68,12 @@ export const MedicineSearchList: React.FC<Props> = ({
         query.trim().length > 0 ? (
           <View style={styles.headerInfo}>
             <Text style={styles.resultsCount}>
-              Found {items.length} {items.length === 1 ? 'medicine' : 'medicines'} for "{query}"
+              Found {safeItems.length} {safeItems.length === 1 ? 'medicine' : 'medicines'} for "{query}"
             </Text>
           </View>
         ) : (
           <View style={styles.headerInfo}>
-            <Text style={styles.sectionTitle}>All Available Medicines ({items.length})</Text>
+            <Text style={styles.sectionTitle}>All Available Medicines ({safeItems.length})</Text>
             <Text style={styles.sectionSubtitle}>Authentic pharmacy supplies with 10-minute delivery</Text>
           </View>
         )
